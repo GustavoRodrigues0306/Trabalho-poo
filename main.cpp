@@ -26,4 +26,36 @@ virtual void render() const=0;
 virtual ~Pessoa(){}
 
 };
+/*
+=========================
+CLASSE PROFESSOR
+=========================*/
 
+class Professor:public Pessoa{
+
+private:
+
+string departamento;
+
+public:
+
+Professor(string n,
+string d)
+
+:Pessoa(n),
+departamento(d){}
+
+
+void render() const override{
+
+cout<<"Professor:"
+<<nome
+
+<<" Dept:"
+<<departamento
+
+<<endl;
+
+}
+
+};
