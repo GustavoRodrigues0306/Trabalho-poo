@@ -92,6 +92,7 @@ private:
 
 string codigo;
 
+
 // vetor dos aunos
 vector<
 unique_ptr<Aluno>>
@@ -102,7 +103,6 @@ public:
 // construtor da turma
 Turma(string c)
 :codigo(c){}
-
 
 // matricula um aluno
 void matricular(
@@ -117,6 +117,7 @@ nome,mat));
 }
 
 // busca aluno pela matricula
+
 Aluno* buscar(
 string mat){
 
@@ -129,6 +130,7 @@ return a.get();
 return nullptr;
 
 }
+
 
 // mostra alunos da turma
 void render() const{
