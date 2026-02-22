@@ -83,3 +83,62 @@ public:
     void render() const override{ cout << "Professor:" << nome << " Dept:" << departamento << endl;
     }
 };
+
+//CLASSE TURMA
+
+class Turma{
+
+private:
+
+string codigo;
+
+vector<
+unique_ptr<Aluno>>
+alunos;
+
+public:
+
+Turma(string c)
+:codigo(c){}
+
+
+void matricular(
+string nome,
+string mat){
+
+alunos.push_back(
+
+make_unique<Aluno>(
+nome,mat));
+
+}
+
+
+Aluno* buscar(
+string mat){
+
+for(auto& a:alunos)
+
+if(a->getMatricula()==mat)
+
+return a.get();
+
+return nullptr;
+
+}
+
+
+void render() const{
+
+cout<<"\nTurma "
+<<codigo
+
+<<endl;
+
+for(auto& a:alunos)
+
+a->render();
+
+}
+
+};
