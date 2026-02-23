@@ -275,4 +275,9 @@ cout<<e.what();
 
 }
 
+ cout << "\nPressione ENTER para sair...";
+    cin.get();
+
+ return 0;
+
 };
